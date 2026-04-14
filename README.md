@@ -49,4 +49,11 @@
 ---
 
 ## 👤 Author
+<<<<<<< HEAD
 **Kumar Shivam Azad** *MCA - Data Science | Gautam Buddha University* [GitHub Profile](https://github.com/K-ShivamZad)
+=======
+**Kumar Shivam Azad** *MCA - Data Science | Gautam Buddha University* [GitHub Profile](https://github.com/K-ShivamZad)
+* **Piyush Prajapati** *MCA - AI | Gautam Buddha University* [GitHub Profile](https://github.com/itspiyushprajapati) *
+* **Kaustubh Jaiswal** *BCA | United University * *
+* **Himanshu Pandey** **BCA | United University * *
+>>>>>>> 33df2948a4d7176d5bcfa7d8c8b0b38dcdc18e30
