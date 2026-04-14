@@ -51,5 +51,12 @@
 ## 👤 Author
 **Kumar Shivam Azad** *MCA - Data Science | Gautam Buddha University* [GitHub Profile](https://github.com/K-ShivamZad)
 * **Piyush Prajapati** *MCA - AI | Gautam Buddha University* [GitHub Profile](https://github.com/itspiyushprajapati) *
-* **Kaustubh Jaiswal** *BCA | United University * *
-* **Himanshu Pandey** **BCA | United University * *
+* **Kaustubh Jaiswal** *BCA | United University * 
+* **Himanshu Pandey** **BCA | United University * 
+
+
+<<<<<<< HEAD
+(Your local changes that you just made)
+=======
+(The code that was pulled down from GitHub)
+>>>>>>> 33df294...
