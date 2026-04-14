@@ -50,3 +50,6 @@
 
 ## 👤 Author
 **Kumar Shivam Azad** *MCA - Data Science | Gautam Buddha University* [GitHub Profile](https://github.com/K-ShivamZad)
+**Piyush Prajapati** *MCA - AI | Gautam Buddha University* [GitHub Profile](https://github.com/itspiyushprajapati)
+**Kaustubh Jaiswal** *BCA | United University * 
+**Himanshu Pandey** **BCA | United University * 
