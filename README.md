@@ -1,16 +1,17 @@
 # gymcore.os ⚡️ 
 ### Next-Gen Gym Management & Analytics Platform
 
-**gymcore.os** is a sleek, modern web application designed for high-performance fitness centers. Built with a focus on **Revenue Management** and **Client Onboarding**, it transforms traditional gym operations into a data-driven experience.
+**gymcore.os** is a sleek, modern web application designed for high-performance fitness centers. Built with a focus on **Revenue Management**, **Client Onboarding**, and **Demographic Analytics**, it transforms traditional gym operations into a data-driven experience.
 
 ---
 
 ## ✨ Features
 * **📊 Vitals Dashboard**: Real-time analytics tracking total members and revenue flow.
+* **📍 Spatial & Demographic Analytics**: Automated age calculations and geographic tracking (City/Zipcode) designed to map member demographics and lay the groundwork for churn prediction.
 * **✨ Client Onboarding**: Streamlined registration process for new members.
 * **👥 Member Portfolio**: Comprehensive directory for managing active client data.
 * **💸 Cashflow Ledger**: Automated tracking of subscription plans and payment history.
-* **🔒 Secure Access**: Administrative authentication layer for data integrity.
+* **🔒 Secure Access**: Administrative authentication layer for data integrity with dynamic UI routing.
 
 ---
 
@@ -48,12 +49,8 @@
 
 ---
 
-## 👤 Author
-<<<<<<< HEAD
-**Kumar Shivam Azad** *MCA - Data Science | Gautam Buddha University* [GitHub Profile](https://github.com/K-ShivamZad)
-=======
-**Kumar Shivam Azad** *MCA - Data Science | Gautam Buddha University* [GitHub Profile](https://github.com/K-ShivamZad)
-* **Piyush Prajapati** *MCA - AI | Gautam Buddha University* [GitHub Profile](https://github.com/itspiyushprajapati) *
-* **Kaustubh Jaiswal** *BCA | United University * *
-* **Himanshu Pandey** **BCA | United University * *
->>>>>>> 33df2948a4d7176d5bcfa7d8c8b0b38dcdc18e30
+## 👥 Authors
+* **Kumar Shivam Azad** *MCA - Data Science | Gautam Buddha University* - [GitHub Profile](https://github.com/K-ShivamZad)
+* **Piyush Prajapati** *MCA - AI | Gautam Buddha University* - [GitHub Profile](https://github.com/itspiyushprajapati)
+* **Kaustubh Jaiswal** *BCA | United University*
+* **Himanshu Pandey** *BCA | United University*
