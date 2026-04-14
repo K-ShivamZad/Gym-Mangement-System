@@ -32,13 +32,7 @@ $membership_id = time();
 </head>
 <body>
 
-    <div class="sidebar">
-        <h2>FITNESS CLUB</h2>
-        <a href="index.php">Dashboard</a>
-        <a href="new_entry.php" class="active">New Registration</a>
-        <a href="members.php">View Members</a>
-        <a href="payments.php">Payments</a>
-    </div>
+    <?php include '../../include/sidebar.php'; ?>
 
     <div class="main-content">
         <h2 style="text-align:center;">New Member Registration</h2>

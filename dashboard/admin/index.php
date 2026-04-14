@@ -28,13 +28,7 @@ if(!isset($_SESSION["user_data"])) {
 </head>
 <body>
 
-    <div class="sidebar">
-        <h2>FITNESS CLUB</h2>
-        <a href="index.php" class="active">Dashboard</a>
-        <a href="new_entry.php">New Registration</a>
-        <a href="members.php">View Members</a>
-        <a href="payments.php">Payments</a>
-    </div>
+    <?php include '../../include/sidebar.php'; ?>
 
     <div class="main-content">
         <div class="header">

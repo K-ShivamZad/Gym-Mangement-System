@@ -13,20 +13,19 @@ if(!isset($_SESSION["user_data"])) {
 <head>
     <title>Gym | Payments</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* Add some basic structure if your style.css is missing these */
+        .main-content { margin-left: 220px; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    </style>
 </head>
 <body>
 
-    <div class="sidebar">
-        <h2>FITNESS CLUB</h2>
-        <a href="index.php">Dashboard</a>
-        <a href="new_entry.php">New Registration</a>
-        <a href="members.php">View Members</a>
-        <a href="payments.php" class="active">Payments</a>
-    </div>
+    <?php include '../../include/sidebar.php'; ?>
 
     <div class="main-content">
         <div class="header">
-            <h2>Payment History</h2>
+            <h2>Payment History & Demographics</h2>
             <div>
                 <a href="logout.php" class="logout-btn">Log Out</a>
             </div>
@@ -38,7 +37,7 @@ if(!isset($_SESSION["user_data"])) {
                     <tr>
                         <th>Sl.No</th>
                         <th>Member Name</th>
-                        <th>Phone Number</th>
+                        <th>Age</th> <th>Phone Number</th>
                         <th>Plan Name</th>
                         <th>Amount Paid</th>
                         <th>Payment Date</th>
@@ -47,8 +46,8 @@ if(!isset($_SESSION["user_data"])) {
                 </thead>
                 <tbody>
                     <?php
-                        // Fetch payment details by joining users, enrolls_to, and plan tables
-                        $query = "SELECT u.username, u.mobile, p.planName, p.amount, e.paid_date, e.expire 
+                        // Fetch payment details AND Date of Birth (dob) from the users table
+                        $query = "SELECT u.username, u.mobile, u.dob, p.planName, p.amount, e.paid_date, e.expire 
                                   FROM enrolls_to e 
                                   INNER JOIN users u ON e.uid = u.userid 
                                   INNER JOIN plan p ON e.pid = p.pid 
@@ -59,9 +58,16 @@ if(!isset($_SESSION["user_data"])) {
 
                         if(mysqli_num_rows($result) > 0){
                             while($row = mysqli_fetch_assoc($result)){
+                                
+                                // Calculate Age dynamically from the Date of Birth
+                                $dob = new DateTime($row['dob']);
+                                $today = new DateTime('today');
+                                $age = $dob->diff($today)->y;
+
                                 echo "<tr>";
                                 echo "<td>" . $sno . "</td>";
                                 echo "<td>" . $row['username'] . "</td>";
+                                echo "<td><strong>" . $age . "</strong> yrs</td>"; // Display the calculated age
                                 echo "<td>" . $row['mobile'] . "</td>";
                                 echo "<td>" . $row['planName'] . "</td>";
                                 echo "<td style='color: green; font-weight: bold;'>₹" . $row['amount'] . "</td>";
@@ -71,7 +77,7 @@ if(!isset($_SESSION["user_data"])) {
                                 $sno++;
                             }
                         } else {
-                            echo "<tr><td colspan='7' style='text-align:center;'>No payment records found.</td></tr>";
+                            echo "<tr><td colspan='8' style='text-align:center;'>No payment records found.</td></tr>";
                         }
                     ?>
                 </tbody>
