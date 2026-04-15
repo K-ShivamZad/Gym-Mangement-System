@@ -1,24 +1,24 @@
 # gymcore.os ⚡️ 
 ### Next-Gen Gym Management & Analytics Platform
 
-**gymcore.os** is a sleek, modern web application designed for high-performance fitness centers. Built with a focus on **Revenue Management**, **Client Onboarding**, and **Demographic Analytics**, it transforms traditional gym operations into a data-driven experience.
+**gymcore.os** is a sleek, modern web application designed for high-performance fitness centers. Built with a focus on **Revenue Management**, **Client Onboarding**, and **Interactive Data Visualization**, it transforms traditional gym operations into a data-driven experience.
 
 ---
 
 ## ✨ Features
-* **📊 Vitals Dashboard**: Real-time analytics tracking total members and revenue flow.
-* **📍 Spatial & Demographic Analytics**: Automated age calculations and geographic tracking (City/Zipcode) designed to map member demographics and lay the groundwork for churn prediction.
-* **✨ Client Onboarding**: Streamlined registration process for new members.
-* **👥 Member Portfolio**: Comprehensive directory for managing active client data.
-* **💸 Cashflow Ledger**: Automated tracking of subscription plans and payment history.
-* **🔒 Secure Access**: Administrative authentication layer for data integrity with dynamic UI routing.
+* **📈 Interactive Data Visualization**: Live Chart.js integration rendering dynamic bar graphs of member distribution across key regional cities.
+* **📍 Spatial & Demographic Analytics**: Automated age calculations and strict geographic data-entry controls to ensure high-fidelity demographic mapping and lay the groundwork for churn prediction.
+* **📊 Vitals Dashboard**: Real-time SQL analytics tracking total members, available plans, and active revenue flow.
+* **✨ Client Onboarding**: Streamlined registration process for new members with transactional database integrity.
+* **💸 Cashflow Ledger**: Automated tracking of subscription plans, age demographics, and payment history.
+* **🔒 Secure Access**: Administrative authentication layer with dynamic UI routing.
 
 ---
 
 ## 🛠️ Technical Stack
-* **Frontend**: HTML5, CSS3 (Gen Z Aesthetic / Minimalist UI)
+* **Frontend**: HTML5, CSS3 (Minimalist UI), Chart.js (Data Visualization)
 * **Backend**: PHP 8.0+
-* **Database**: MySQL (Relational Schema)
+* **Database**: MySQL (Relational Schema & Transactional Logic)
 * **Tools**: VS Code, XAMPP, Git Bash
 
 ---
