@@ -6,36 +6,25 @@ if(!isset($_SESSION["user_data"])) {
     header("location: ../../index.php");
     exit();
 }
-
-// Generate a random Membership ID (like in your original project)
 $membership_id = time(); 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Gym | New Entry</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; }
-        .sidebar { width: 220px; background: #2b303a; color: white; height: 100vh; position: fixed; padding-top: 20px; }
-        .sidebar h2 { text-align: center; margin-bottom: 30px; letter-spacing: 1px; }
-        .sidebar a { display: block; color: #cfd8dc; padding: 15px 20px; text-decoration: none; border-left: 4px solid transparent; }
-        .sidebar a:hover, .sidebar a.active { background: #1e2229; border-left: 4px solid #007bff; color: white; }
-        .main-content { margin-left: 220px; padding: 20px; }
-        
-        .form-container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); max-width: 600px; margin: 20px auto; }
-        .form-group { margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
-        .form-group label { width: 30%; font-weight: bold; color: #333; }
-        .form-group input, .form-group select { width: 65%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
-        .btn-submit { background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; margin-top: 10px;}
-        .btn-submit:hover { background: #218838; }
-    </style>
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 
     <?php include '../../include/sidebar.php'; ?>
 
     <div class="main-content">
-        <h2 style="text-align:center;">New Member Registration</h2>
+        <div class="header">
+            <h2>New Member Registration</h2>
+            <div>
+                <a href="logout.php" class="logout-btn">Log Out</a>
+            </div>
+        </div>
         
         <div class="form-container">
             <form action="save_member.php" method="POST">
@@ -86,8 +75,16 @@ $membership_id = time();
 
                 <div class="form-group">
                     <label>City:</label>
-                    <input type="text" name="city">
+                    <select name="city" required>
+                    <option value="">--Select City--</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Gautam Buddha Nagar">Gautam Buddha Nagar</option>
+                    <option value="Prayagraj">Prayagraj</option>
+                   <option value="Azamgarh">Azamgarh</option>
+                   </select>
                 </div>
+
+                
 
                 <div class="form-group">
                     <label>State:</label>
@@ -104,7 +101,6 @@ $membership_id = time();
                     <select name="plan" required>
                         <option value="">--Please Select--</option>
                         <?php
-                            // Fetch plans dynamically from the database
                             $query = "SELECT * FROM plan";
                             $result = mysqli_query($con, $query);
                             if(mysqli_num_rows($result) > 0){
