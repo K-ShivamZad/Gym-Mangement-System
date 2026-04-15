@@ -1,18 +1,8 @@
 <?php
 session_start();
 
-// --- DATABASE CONNECTION DIRECTLY IN THE FILE ---
-$host = "localhost";
-$username = "root";
-$password = ""; 
-$db_name = "gymsysdb"; 
 
-$con = mysqli_connect($host, $username, $password, $db_name);
-
-if (mysqli_connect_errno()) {
-    die("CRITICAL ERROR - DB FAILED: " . mysqli_connect_error());
-}
-// ------------------------------------------------
+include 'include/db_conn.php';
 
 // Process the login
 if (isset($_POST['btnLogin'])) {
